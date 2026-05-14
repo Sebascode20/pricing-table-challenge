@@ -1,0 +1,239 @@
+:root {
+  --main-font: "Be Vietnam Pro", sans-serif;
+  --main-header-bg-color: #f8fafc;
+  --main-header-text-color: #4d5562;
+  --main-header-title-color: #121826;
+  --membership-color: #263fa9;
+  --popular-text-color: #ffffff;
+  --border-bottom-color: #4d556233;
+  --btn-popular-bg-color: #7c4f1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  text-align: center;
+}
+
+article div p {
+  height: 49.59px;
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: var(--main-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+}
+
+.btn-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+}
+
+.btn-start,
+.enterprise__membership-features,
+.features,
+.popular__membership-header,
+.popular__membership-features {
+  font-size: 90%;
+}
+
+.btn-start a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+}
+
+.container__features {
+  margin-top: 9.7rem;
+  line-height: 3.4;
+  min-width: 128px;
+}
+
+.container__popular-membership .btn-start {
+  background-color: var(--btn-popular-bg-color);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.container__popular-membership .btn-start a {
+  color: var(--popular-text-color);
+}
+
+.check-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--border-bottom-color);
+  margin-top: 0.03rem;
+}
+
+.check-container img {
+  display: block;
+  margin-block: 0.9rem;
+}
+
+.container__free-membership,
+.container__team-membership {
+  display: none;
+}
+
+.container__popular-membership,
+.container__enterprise-membership {
+  width: 130px;
+  flex: 1;
+}
+
+.container__enterprise-membership {
+  margin-right: 1rem;
+}
+
+.container__popular-membership {
+  background-color: var(--main-header-title-color);
+  color: var(--popular-text-color);
+  order: 1;
+  border-radius: 20px;
+}
+
+.enterprise__membership-features,
+.popular__membership-features {
+  line-height: 3.8;
+}
+
+.enterprise__membership-features {
+  margin-top: 1.2rem;
+  margin-inline: -0.563rem;
+}
+
+.features {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-inline: 1rem;
+  color: var(--main-header-title-color);
+  font-weight: 600;
+  background-color: var(--main-header-bg-color);
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+.features:first-child {
+  border-top-left-radius: 20px;
+}
+
+.features:last-child {
+  border-bottom-left-radius: 20px;
+}
+
+.free__membership-header .membership,
+.team__membership-header .membership,
+.enterprise__membership-header .membership {
+  color: var(--membership-color);
+  font-weight: 600;
+}
+
+.free__membership-header .price,
+.team__membership-header .price,
+.enterprise__membership-header .price,
+.popular__membership-header .price {
+  font-size: 3rem;
+  color: var(--main-header-title-color);
+  font-weight: 600;
+}
+
+.free__membership-header .period,
+.team__membership-header .period,
+.enterprise__membership-header .period {
+  color: var(--main-header-text-color);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  background-image: url("../resources/bg-pattern.png");
+  background-color: var(--main-header-bg-color);
+}
+
+.header__title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--main-header-title-color);
+}
+
+.header__text {
+  text-align: center;
+  text-wrap: balance;
+  color: var(--main-header-text-color);
+}
+
+.popular__membership-header .price {
+  color: var(--popular-text-color);
+}
+
+.popular__membership-header .membership {
+  width: fit-content;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  background-color: var(--membership-color);
+  border-radius: 20px;
+}
+
+.popular__membership-header,
+.enterprise__membership-header {
+  padding-top: 1.2rem;
+}
+
+.popular__membership-features {
+  margin-top: 1.45rem;
+  margin-left: -0.5rem;
+}
+
+.free__membership-header .membership,
+.team__membership-header .membership,
+.popular__membership-header .membership,
+.enterprise__membership-header .membership {
+  margin-bottom: 1rem;
+}
