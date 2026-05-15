@@ -19,9 +19,16 @@ article {
   text-align: center;
 }
 
-article div p {
+article div p,
+.check-container,
+.line-container {
   height: 49.59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid var(--border-bottom-color);
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -60,14 +67,15 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 70px;
+  height: 60px;
   margin: 0;
 }
 
 .btn-start,
-.enterprise__membership-features,
+.enterprise-membership__features,
+.enterprise-membership__header,
 .features,
-.popular__membership-header,
+.popular-membership__header,
 .popular__membership-features {
   font-size: 90%;
 }
@@ -100,14 +108,6 @@ main {
   color: var(--popular-text-color);
 }
 
-.check-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid var(--border-bottom-color);
-  margin-top: 0.03rem;
-}
-
 .check-container img {
   display: block;
   margin-block: 0.9rem;
@@ -121,7 +121,7 @@ main {
 .container__popular-membership,
 .container__enterprise-membership {
   width: 130px;
-  flex: 1;
+  height: fit-content;
 }
 
 .container__enterprise-membership {
@@ -135,14 +135,15 @@ main {
   border-radius: 20px;
 }
 
-.enterprise__membership-features,
+.enterprise-membership__features,
 .popular__membership-features {
   line-height: 3.8;
 }
 
-.enterprise__membership-features {
-  margin-top: 1.2rem;
-  margin-inline: -0.563rem;
+.enterprise-membership__features {
+  margin-top: 1.48rem;
+  margin-left: -0.5rem;
+  margin-right: -1.5rem;
 }
 
 .features {
@@ -165,25 +166,25 @@ main {
   border-bottom-left-radius: 20px;
 }
 
-.free__membership-header .membership,
-.team__membership-header .membership,
-.enterprise__membership-header .membership {
+.free-membership__header .membership,
+.team-membership__header .membership,
+.enterprise-membership__header .membership {
   color: var(--membership-color);
   font-weight: 600;
 }
 
-.free__membership-header .price,
-.team__membership-header .price,
-.enterprise__membership-header .price,
-.popular__membership-header .price {
+.free-membership__header .price,
+.team-membership__header .price,
+.enterprise-membership__header .price,
+.popular-membership__header .price {
   font-size: 3rem;
   color: var(--main-header-title-color);
   font-weight: 600;
 }
 
-.free__membership-header .period,
-.team__membership-header .period,
-.enterprise__membership-header .period {
+.free-membership__header .period,
+.team-membership__header .period,
+.enterprise-membership__header .period {
   color: var(--main-header-text-color);
 }
 
@@ -204,16 +205,17 @@ main {
 }
 
 .header__text {
+  max-width: 441px;
   text-align: center;
   text-wrap: balance;
   color: var(--main-header-text-color);
 }
 
-.popular__membership-header .price {
+.popular-membership__header .price {
   color: var(--popular-text-color);
 }
 
-.popular__membership-header .membership {
+.popular-membership__header .membership {
   width: fit-content;
   margin: 0 auto;
   padding-inline: 1rem;
@@ -221,19 +223,114 @@ main {
   border-radius: 20px;
 }
 
-.popular__membership-header,
-.enterprise__membership-header {
+.popular-membership__header,
+.enterprise-membership__header {
   padding-top: 1.2rem;
 }
 
 .popular__membership-features {
-  margin-top: 1.45rem;
-  margin-left: -0.5rem;
+  margin-top: 1.4rem;
 }
 
-.free__membership-header .membership,
-.team__membership-header .membership,
-.popular__membership-header .membership,
-.enterprise__membership-header .membership {
+.free-membership__header .membership,
+.team-membership__header .membership,
+.popular-membership__header .membership,
+.enterprise-membership__header .membership {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .container__team-membership {
+    display: initial;
+  }
+
+  .container__popular-membership {
+    order: initial;
+  }
+
+  .container__popular-membership,
+  .container__enterprise-membership,
+  .container__team-membership {
+    width: 200px;
+    flex: 1;
+  }
+
+  .container__enterprise-membership {
+    margin-right: initial;
+  }
+
+  .container__features {
+    margin-top: 10.2rem;
+    line-height: 3.519;
+    height: 49.57px;
+    min-width: 128px;
+  }
+
+  .free-membership__header .price,
+  .team-membership__header .price,
+  .enterprise-membership__header .price,
+  .popular-membership__header .price {
+    font-size: 4rem;
+  }
+
+  .line-container,
+  .check-container,
+  .team-membership__features p,
+  .popular__membership-features p,
+  .enterprise-membership__features p,
+  .free-membership__features p {
+    height: 57.4px;
+  }
+
+  .team-membership__features,
+  .popular__membership-features,
+  .enterprise-membership__features,
+  .free-membership__features {
+    margin-top: 0.4rem;
+    margin-inline: -0.563rem;
+    line-height: 2.8;
+  }
+
+  .popular__membership-features {
+    margin-left: 0rem;
+  }
+
+  .team-membership__header {
+    padding-top: 1.2rem;
+  }
+
+  .line-container p {
+    border: none;
+  }
+
+  .btn-start,
+  .enterprise-membership__features,
+  .features,
+  .team-membership__header,
+  .team__membership-features,
+  .enterprise-membership__features,
+  .enterprise-membership__header,
+  .features,
+  .popular-membership__header,
+  .popular__membership-features {
+    font-size: initial;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .container__popular-membership,
+  .container__enterprise-membership,
+  .container__team-membership,
+  .container__free-membership {
+    width: 250px;
+    flex: 1;
+  }
+
+  .free-membership__header {
+    padding-top: 1.2rem;
+  }
+
+  .container__free-membership {
+    display: initial;
+  }
 }
