@@ -260,10 +260,14 @@ main {
   }
 
   .container__features {
-    margin-top: 10.2rem;
+    margin-top: 13.2rem;
     line-height: 3.519;
     height: 49.57px;
     min-width: 128px;
+  }
+
+  .features {
+    max-width: initial;
   }
 
   .free-membership__header .price,
@@ -286,8 +290,7 @@ main {
   .popular__membership-features,
   .enterprise-membership__features,
   .free-membership__features {
-    margin-top: 0.4rem;
-    margin-inline: -0.563rem;
+    margin-top: 3.4rem;
     line-height: 2.8;
   }
 
